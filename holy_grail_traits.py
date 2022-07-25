@@ -133,30 +133,30 @@ class HolyGrailTraits():
 
             #compare selected trait to the original prompt
             # get the closest based on the original prompt
-            upro_enc = self.enc_model.encode([user_prompt])
-            trait_enc = self.enc_model.encode(treats)
-            t_dist = cos_sim(upro_enc,trait_enc)[0]
+            # upro_enc = self.enc_model.encode([user_prompt])
+            # trait_enc = self.enc_model.encode(treats)
+            # t_dist = cos_sim(upro_enc,trait_enc)[0]
 
-            close_ind = np.argsort(t_dist)[::-1][:int(len(t_dist)/2)].flatten()#[:bestNum].flatten()
-            for i in close_ind:
-                pair_traits.append((treats[i],t_dist[i]))
+            # close_ind = np.argsort(t_dist)[::-1][:int(len(t_dist)/2)].flatten()#[:bestNum].flatten()
+            # for i in close_ind:
+            #     pair_traits.append((treats[i],t_dist[i]))
                 
             
         #sort by closest distance
-        sort_traits = [y[0] for y in sorted(pair_traits, key = lambda x: x[1])]
-        best_traits = sort_traits[:bestNum]
+        # sort_traits = [y[0] for y in sorted(pair_traits, key = lambda x: x[1])]
+        # best_traits = sort_traits[:bestNum]
         
         #add best from group
         best_traits += [x['txt'] for x in best_of.values()]
         best_traits = np.unique(best_traits)
         
-        bad_traits = [x for x in sort_traits if x not in best_traits]
-        bad_traits = np.unique(bad_traits)
+        # bad_traits = [x for x in sort_traits if x not in best_traits]
+        # bad_traits = np.unique(bad_traits)
         #bad_traits = bad_traits[:int(len(best_traits)*1.5)]
         
         best_traits.sort()
-        bad_traits.sort()
+        # bad_traits.sort()
             
         
-        return best_traits, bad_traits
+        return best_traits#, bad_traits
         
