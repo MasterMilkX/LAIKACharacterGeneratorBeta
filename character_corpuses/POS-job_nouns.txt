@@ -1,0 +1,311 @@
+accountant
+actor
+actuary
+advisor
+aide
+air traffic controller
+ambassador
+animator
+archer
+architect
+artist
+astronaut
+astronomer
+athlete
+attorney
+auctioneer
+author
+babysitter
+baker
+ballerina
+banker
+barber
+bartender
+baseball player
+basketball player
+bellhop
+biologist
+blacksmith
+bookkeeper
+bowler
+builder
+businessperson
+butcher
+butler
+cab driver
+calligrapher
+captain
+cardiologist
+caregiver
+carpenter
+cartographer
+cartoonist
+cashier
+catcher
+caterer
+cellist
+chaplain
+chauffeur
+chef
+chemist
+clergy
+clerk
+coach
+cobbler
+composer
+concierge
+consul
+contractor
+cook
+cop
+coroner
+courier
+cryptographer
+custodian
+dancer
+dental hygienist
+dentist
+deputy
+dermatologist
+designer
+detective
+developer
+dictator
+dietician
+director
+disc jockey
+diver
+doctor
+doorperson
+driver
+drummer
+dry cleaner
+ecologist
+economist
+editor
+educator
+electrician
+emperor
+engineer
+entertainer
+entomologist
+entrepreneur
+executive
+explorer
+exporter
+exterminator
+extra (in a movie)
+falconer
+farmer
+filmmaker
+financier
+firefighter
+fisher
+flight attendant
+flutist
+football player
+foreman
+game designer
+garbage person
+gardener
+gatherer
+gemcutter
+general
+geneticist
+geographer
+geologist
+golfer
+governor
+grocer
+guide
+hairdresser
+handyperson
+harpist
+highway patrol
+hobo
+hunter
+illustrator
+importer
+instructor
+intern
+internist
+interpreter
+inventor
+investigator
+jailer
+janitor
+jester
+jeweler
+jockey
+journalist
+judge
+king
+karate teacher
+laborer
+landlord
+landscaper
+launderer
+lawyer
+lecturer
+legal aide
+librarian
+librettist
+lifeguard
+linguist
+lobbyist
+locksmith
+lyricist
+magician
+maid
+mail carrier
+manager
+manufacturer
+marine
+marketer
+mason
+mathematician
+mayor
+mechanic
+messenger
+midwife
+miner
+model
+monk
+muralist
+musician
+navigator
+negotiator
+notary
+novelist
+nun
+nurse
+nutritionist
+oboist
+operator
+ophthalmologist
+optician
+oracle
+orderly
+ornithologist
+painter
+paleontologist
+paralegal
+park ranger
+pathologist
+pawnbroker
+peddler
+pediatrician
+percussionist
+performer
+pharmacist
+philanthropist
+philosopher
+photographer
+physician
+physician's assistant
+physicist
+pianist
+pilot
+pitcher
+plumber
+poet
+police officer
+police officer
+politician
+president
+prince
+princess
+principal
+private
+private detective
+producer
+professor
+programmer
+psychiatrist
+psychologist
+publisher
+quarterback
+quilter
+radiologist
+rancher
+ranger
+real estate agent
+receptionist
+referee
+registrar
+reporter
+representative
+researcher
+restaurateur
+retailer
+retiree
+sailor
+salesperson
+samurai
+saxophonist
+scholar
+scientist
+scout
+scuba diver
+seamstress
+secretary
+security guard
+senator
+sheriff
+singer
+smith
+socialite
+soldier
+spy
+star
+statistician
+stockbroker
+street sweeper
+student
+surgeon
+surveyor
+swimmer
+tailor
+tax collector
+taxi driver
+taxidermist
+teacher
+technician
+tennis player
+test pilot
+therapist
+tiler
+toolmaker
+trader
+trainer
+translator
+trash collector
+travel agent
+treasurer
+truck driver
+tutor
+typist
+queen
+umpire
+undertaker
+usher
+valet
+veteran
+veterinarian
+vicar
+videographer
+violinist
+waiter
+warden
+warrior
+watchmaker
+weaver
+welder
+woodcarver
+worker
+wrangler
+writer
+xylophonist
+yodeler
+zookeeper
+zoologist
