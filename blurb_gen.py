@@ -10,6 +10,8 @@ from gensim.models import Word2Vec
 import numpy as np
 
 import re
+import os
+local_dir = os.path.dirname(__file__)
 
 import quick_ner as NER
 
@@ -334,7 +336,7 @@ def group_blurbs_W2V(blurbs,thresh=None,num_groups=None,debug=False):
     
     #train a model on the tokenizations and get vectors of each word
 #     model = Word2Vec(token_blurbs, vector_size=100, window=2, min_count=0)
-    model = Word2Vec.load("common.model")
+    model = Word2Vec.load(os.path.join(local_dir,"common.model"))
     model.build_vocab(token_blurbs, update=True)
     model.train(token_blurbs, total_examples=model.corpus_count, epochs=model.epochs)
 
@@ -421,7 +423,7 @@ def getBestBlurbs(prompt,blurb_set,close=2,far=1,debug=False):
     
     # convert the prompt and blurb sets to vectors (again)
 #     model = Word2Vec(all_tokens, vector_size=100, window=2, min_count=0)
-    model = Word2Vec.load("common.model")
+    model = Word2Vec.load(os.path.join(local_dir,"common.model"))
     model.build_vocab(all_tokens, update=True)
     model.train(all_tokens, total_examples=model.corpus_count, epochs=model.epochs)
     prompt_vec = vectorize(prompt,model)
