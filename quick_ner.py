@@ -6,6 +6,7 @@ import spacy
 import numpy as np
 import random
 import re
+import os
 import nltk
 from nltk.corpus import stopwords
 import requests
@@ -17,10 +18,11 @@ spacy_ner = spacy.load('en_core_web_trf')
 stopW = set(stopwords.words("english"))
 
 # get default names and places
+local_dir = os.path.dirname(__file__)
 default_values = {'names':[],'places':[]}
-with open('names.txt','r') as nf:
+with open(os.path.join(local_dir,'names.txt'),'r') as nf:
     default_values['names'] = [x.strip() for x in nf.readlines()]
-with open('places.txt','r') as pf:
+with open(os.path.join(local_dir,'places.txt'),'r') as pf:
     default_values['places'] = [x.strip() for x in pf.readlines()]
 
 

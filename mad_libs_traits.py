@@ -4,6 +4,7 @@
 import numpy as np
 import random
 import re
+import os
 
 #for encoder model
 from sentence_transformers import SentenceTransformer
@@ -58,7 +59,8 @@ class MadLibsTraits():
     #import raw line data
     def getFileDat(self, file):
         dat = []
-        with open(file, 'r') as f:
+        local_dir = os.path.dirname(__file__)
+        with open(os.path.join(local_dir,file), 'r') as f:
             dat = f.readlines()
             dat = [l.strip() for l in dat]
         return dat

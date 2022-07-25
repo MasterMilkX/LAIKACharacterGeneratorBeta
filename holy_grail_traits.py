@@ -5,6 +5,7 @@ import blurb_gen as BGen
 
 import numpy as np
 from tqdm import tqdm
+import os
 
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity as cos_sim
@@ -51,7 +52,8 @@ class HolyGrailTraits():
                 fi = {}
                 #get raw traits
                 tok_traits = []
-                with open(tfd['file'],'r') as f:
+                local_dir = os.path.dirname(__file__)
+                with open(os.path.join(local_dir,tfd['file']),'r') as f:
                     dat = f.readlines()
                     fi['traits'] = np.unique([BGen.regexFixer(d.strip().lower()) for d in dat])
                     
