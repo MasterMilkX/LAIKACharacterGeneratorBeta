@@ -149,7 +149,7 @@ class HolyGrailTraits():
         # best_traits = sort_traits[:bestNum]
         
         #add best from group
-        best_traits += [x['txt'] for x in best_of.values()]
+        best_traits = [x['txt'] for x in best_of.values()]
         best_traits = np.unique(best_traits)
         
         # bad_traits = [x for x in sort_traits if x not in best_traits]
