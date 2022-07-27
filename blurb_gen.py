@@ -6,12 +6,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import gensim
-from gensim.models import Word2Vec
+from sentence_transformers import SentenceTransformer
 import numpy as np
 
 import re
-import os
-local_dir = os.path.dirname(__file__)
 
 import quick_ner as NER
 
@@ -20,7 +18,8 @@ warnings.filterwarnings(action = 'ignore')
 
 stop_words = set(stopwords.words('english'))
 
-
+#import the encoding model
+MODEL = SentenceTransformer('all-mpnet-base-v2')
 
 # Turn a paragraph of information into bullet point text based on a POS grammar format
 
@@ -331,27 +330,8 @@ def cluster_dist_mat(dm,max_i,thresh=None,num_groups=None):
 
 # group a list of text blurbs together using Word2Vec encoding
 def group_blurbs_W2V(blurbs,thresh=None,num_groups=None,debug=False):
-    #tokenize blurbs
-    token_blurbs = [tokenize(b) for b in blurbs]
-    
-    #train a model on the tokenizations and get vectors of each word
-#     model = Word2Vec(token_blurbs, vector_size=100, window=2, min_count=0)
-    model = Word2Vec.load(os.path.join(local_dir,"common.model"))
-    model.build_vocab(token_blurbs, update=True)
-    model.train(token_blurbs, total_examples=model.corpus_count, epochs=model.epochs)
 
-    vec_blurbs = []
-    for tb in token_blurbs:
-        v = []
-        for w in tb:
-            if len(v) == 0:
-                v = model.wv.get_vector(w).copy()
-            else:
-                v += model.wv.get_vector(w).copy()
-                
-        if len(v) > 0:
-            v /= len(tb) #average
-            vec_blurbs.append(v)
+    vec_blurbs = [vectorize(b) for b in blurbs]
     
     #get cosine distances from average of sets of word vectors
     dist_mat = {}
@@ -366,7 +346,7 @@ def group_blurbs_W2V(blurbs,thresh=None,num_groups=None,debug=False):
     if debug:
         for k,v in dist_mat.items():
             if v >= thresh:
-                print(f"{token_blurbs[k[0]]} - {token_blurbs[k[1]]} => {v}")
+                print(f"{blurbs[k[0]]} - {blurbs[k[1]]} => {v}")
         print("")
                 
     # combine indexes back to blurb groups
@@ -377,30 +357,10 @@ def group_blurbs_W2V(blurbs,thresh=None,num_groups=None,debug=False):
     return sorted(blurb_clust,key=lambda x:len(x),reverse=True)
     
     
-    
-
-
-
-
-# SIFT FOR BEST BLURBS TO SHOW
-def tokenize(txt):
-    t = word_tokenize(txt)
-    t = [w for w in t if w.lower() not in stop_words]
-    t = [w for w in t if re.match("[a-zA-Z]+",w)]
-    return t
-
              
-def vectorize(txt,model):
-    tokens = tokenize(txt)  #tokenize again
-    v = []
-    for w in tokens:
-        if len(v) == 0:
-            v = model.wv.get_vector(w).copy()
-        else:
-            v += model.wv.get_vector(w).copy()
-    if len(v) > 0:
-        v /= len(tokens) #average
-    return v
+def vectorize(txt):
+    return MODEL.encode(txt)
+    
 
 def strike(text):
     result = ''
@@ -412,27 +372,14 @@ def strike(text):
     
 # retrieves the most relevant blurbs from a set (using distance in vector space)
 def getBestBlurbs(prompt,blurb_set,close=2,far=1,debug=False):
-    #tokenize every word
-    all_tokens = []
-    ptok = tokenize(prompt)
-    all_tokens.append(ptok)
-    for bs in blurb_set:
-        for s in bs:
-            btok = tokenize(s)
-            all_tokens.append(btok)
-    
-    # convert the prompt and blurb sets to vectors (again)
-#     model = Word2Vec(all_tokens, vector_size=100, window=2, min_count=0)
-    model = Word2Vec.load(os.path.join(local_dir,"common.model"))
-    model.build_vocab(all_tokens, update=True)
-    model.train(all_tokens, total_examples=model.corpus_count, epochs=model.epochs)
-    prompt_vec = vectorize(prompt,model)
+
+    prompt_vec = vectorize(prompt)
     
     bset_vec = []
     for bs in blurb_set:
         svec = []
         for b in bs:
-            svec.append(vectorize(b,model))
+            svec.append(vectorize(b))
         bset_vec.append(svec)
         
     # reduce each blurb group to one representative
@@ -440,27 +387,28 @@ def getBestBlurbs(prompt,blurb_set,close=2,far=1,debug=False):
     best_bvecs = []
     for bsi in range(len(bset_vec)):
         # take the blurb that is closest to the prompt
-#         dists = [cosine_similarity([bv],[prompt_vec])[0][0] for bv in bset_vec[bsi]]
-#         max_dist = max(dists)
-#         best_ind = dists.index(max_dist)
+        dists = [cosine_similarity([bv],[prompt_vec])[0][0] for bv in bset_vec[bsi]]
+        max_dist = max(dists)
+        best_ind = dists.index(max_dist)
 
         # take the longest blurb
-        longest_blurb = max(blurb_set[bsi],key=lambda x: len(x))
-        best_ind = blurb_set[bsi].index(longest_blurb)
+#         longest_blurb = max(blurb_set[bsi],key=lambda x: len(x))
+#         best_ind = blurb_set[bsi].index(longest_blurb)
         
         best_bvecs.append(bset_vec[bsi][best_ind])
         best_blurbs.append(blurb_set[bsi][best_ind])
         
-    #print(best_blurbs)
+    if debug:
+        print(f"Best: {best_blurbs}")
         
         
     # find the top X,Y blurb vectors CLOSEST and FURTHEST to the prompt vector
-    #blurb_dists = [cosine_similarity([bv],[prompt_vec])[0][0] for bv in best_bvecs]
-    blurb_dists = [np.linalg.norm(bv-prompt_vec) for bv in best_bvecs]
+    blurb_dists = [cosine_similarity([bv],[prompt_vec])[0][0] for bv in best_bvecs]
+    #blurb_dists = [np.linalg.norm(bv-prompt_vec) for bv in best_bvecs]
     blurb_dists = [blurb_dists[i]*len(best_blurbs) for i in range(len(best_blurbs))]
     selected_index = []
-    closest = np.argsort(np.array(blurb_dists))
-    farthest = closest[::-1]
+    farthest = np.argsort(np.array(blurb_dists))
+    closest = farthest[::-1]
     
     if debug:
         print(f"Closest ({[blurb_dists[i] for i in closest[:(close+2)]]}): {[best_blurbs[i] for i in closest[:(close+2)]]}")
@@ -470,35 +418,27 @@ def getBestBlurbs(prompt,blurb_set,close=2,far=1,debug=False):
     # get the indices of the top X and Y of each
     ct = 0
     for x in closest:
+        if ct == close:
+            break
         if x not in selected_index:
             selected_index.append(x)
             ct += 1
-        if ct == close:
-            break
+        
     ct = 0
     for y in farthest:
+        if ct == far:
+            break
         if y not in selected_index:
             selected_index.append(y)
             ct += 1
-        if ct == far:
-            break
+        
             
     # get the leftovers that didn't make the cut in order of selection proximity
     selected_blurbs = [best_blurbs[i] for i in selected_index]
     removed_blurbs = []
     flat_blurbs = [x for xs in blurb_set for x in xs]
-    for i in range(len(flat_blurbs)):
-        if i < len(closest):
-            cb = best_blurbs[closest[i]]
-            if cb not in selected_blurbs and cb not in removed_blurbs:
-                removed_blurbs.append(cb)
-        if i < len(farthest):
-            fb = best_blurbs[farthest[i]]
-            if fb not in selected_blurbs and fb not in removed_blurbs:
-                removed_blurbs.append(fb)
-          
-        flb = flat_blurbs[i]
-        if flb not in removed_blurbs and flb not in best_blurbs:
-            removed_blurbs.append(flat_blurbs[i])
+    for fb in flat_blurbs:
+        if fb not in selected_blurbs:
+            removed_blurbs.append(fb)
     
     return selected_blurbs, removed_blurbs
