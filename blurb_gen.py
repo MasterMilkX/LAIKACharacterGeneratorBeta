@@ -5,7 +5,6 @@
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-import gensim
 from sentence_transformers import SentenceTransformer
 import numpy as np
 

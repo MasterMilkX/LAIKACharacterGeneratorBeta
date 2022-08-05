@@ -1,2 +1,4 @@
 *.zip
 character_descriptions_spark_GENERIC/*
+*.ipynb
+common.model

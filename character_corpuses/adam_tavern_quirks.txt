@@ -1,0 +1,367 @@
+Their arms are tattooed.
+Their clothes always look freshly pressed. 
+Their clothes are filthy.
+Their eyebrow(s) are pierced. 
+Their hands are tattooed.
+Their legs are tattooed.
+Their lip(s) are pierced. 
+Their nose is pierced.
+They always carry a stuffed bear. 
+They always keep their head held high. 
+They always look down at the floor. 
+They always play with their hair 
+They always smell of lavender. 
+They always squint. 
+They always stand up straight. 
+They are a bad listener. 
+They are afraid of birds.
+They are afraid of children.
+They are afraid of dogs.
+They are afraid of ghosts.
+They are afraid of goblins.
+They are afraid of intimacy
+They are afraid of spiders.
+They are allergic to nuts.
+They are always cold.
+They are always hot. 
+They are always joking. 
+They are always jolly. 
+They are always polite. 
+They are always rude. 
+They are always sad. 
+They are always serious. 
+They are always smiling. 
+They are always smoking a cigar.
+They are always smoking a cigarette.
+They are always smoking a pipe.
+They are always talking about themselves. 
+They are deaf. 
+They are hard of hearing. 
+They are illiterate. 
+They are in a wheelchair.
+They are missing arm.
+They are missing fingers.
+They are mute. 
+They are never serious. 
+They are very forgetful. 
+They are very messy. 
+They are very sweaty. 
+They are very tidy. 
+They are always carrying a book. 
+They bite their nails.
+They can't stand/sit still. 
+They chew with their mouth open. 
+They don't believe in magic. 
+They don't eat meat. 
+They don't have any teeth. 
+They eat everything with their hands.
+They flirt with everyone they meet. 
+They frequently cough. 
+They frequently hum. 
+They frequently sing-talk.
+They frequently tap their hands/feet. 
+They frequently whistle.
+They give everyone a nickname. 
+They hate getting wet. 
+They have a crooked nose.
+They have a deep voice. 
+They have a distinctive birthmark. 
+They have a facial tattoo.
+They have a fiery temper.
+They have a glass eye. 
+They have a gruff voice. 
+They have a high-pitched voice.
+They have a hoarse voice. 
+They have a missing eye. 
+They have a missing leg.
+They have a neck tattoo.
+They have a scar on their face. 
+They have acne. 
+They have an overbite.
+They have an underbite.
+They have been magically turned into a pig.
+They have missing teeth.
+They have their arm in a sling.
+They have to have constant stimulation (touch/sound/visual)
+They knock on every door before going through. 
+They lick their lips frequently. 
+They move very quickly. 
+They move very slowly. 
+They mumble when they speak. 
+They must correct improper speech. 
+They never make jokes. 
+They never smile. 
+They often forget names. 
+They overshare personal details. 
+They play with their ear when they lie. 
+They slur their words.
+They snort when they laugh. 
+They speak in a whisper. 
+They speak in the third person. 
+They speak very slowly. 
+They speak with a stutter.
+They stand with a hunch. 
+They struggle to remember faces. 
+They swear frequently.
+They take everything literally.
+They talk with a lisp. 
+They twitch frequently. 
+They walk on crutches
+They walk with a cane.
+They walk with a limp. 
+They hallucinate. 
+They are an overachiever. 
+They wear a wig.
+They breathe out of their mouth. 
+They don't wear shoes. 
+They only eat meat. 
+They are often lost in thought.
+They click their tongue while under stress.
+They sweat near constantly.
+They habitually lean against nearby surfaces.
+They wear brown leather gloves at all times.
+They wear a beaver-fur hat at all times.
+Their hair is perfectly coiffed. 
+They have a mole on their chin.
+They have a mole on thier cheek.
+They have a mole on their eyelid.
+They float four inches above the ground instead of walking.
+They occasionally skip while walking.
+They hold a crystal orb in one hand.
+They keep a crystal rod in their coat pocket at all times.
+They wear an eyepatch.
+They have an impressively-large beard.
+They have naturally dark eyes.
+They have a tattoo of a serpent around their wrist.
+They have a tattoo of a lion around their shoulders.
+They have a tattoo of an anchor on their neck.
+They have a prisoner's brand on the back of their wrist.
+They have a tattoo of chains around their upper calf.
+They have a tattoo of a phoenix on their back.
+They have a tattoo of a sword on their forearm.
+They have a prisoner's brand on their face.
+They have a prisoner's brand across their back.
+They have a tattoo of an eagle on their back.
+Their face is covered in pimples.
+Their face is covered with aggrivated rashes.
+Their face is covered in gang tattoos.
+Their hair twinkles with small faerie lights.
+Their long auburn hair is tied into a tight bun.
+Their long jet black hair is tied into a tight bun.
+They wear a dirty longcoat stained with mud.
+They wear high boots stained with mud.
+They wear fine lace gloves.
+They wear old riding boots.
+They wear antique war regalia. 
+They wear a veteran's coat with the patches removed.
+They wear a patched wool cloak.
+They wear a single rhinestone-studded glove on their right hand.
+They wear fingerless leather gloves.
+Their hair is waxed into sharp points.
+They carry a large wooden trunk across their back.
+They carry a canvas dufflebag across one shoulder.
+They carry a wicker basked filled with chicken across their back.
+They carry a small child on their back.
+They carry two small children on their back.
+They carry a red weasel on one shoulder.
+They carry a large sword across their back.
+They carry two small swords on both sides of their hips.
+They carry an intricate hand crossbow at their hip.
+They carry a gnarled walking staff in their hand.
+They carry an antique arquebus at their hip.
+They carry a leather bullwhip at their hip.
+They carry a steel beartrap at their hip.
+They carry a flintlock rifle across their back.
+They carry a longbow across their back.
+They carry a quiver full of black and white fletched arrows.
+They carry a quiver full of red and black fletched arrows
+They carry a pouch filled to the brim with coins.
+They wear a bandolier of potions across their chest.
+They wear a bandolier of daggers across their chest.
+They wear a bandolier of explosives across their chest.
+They wear a bandolier of stuffed animals across their chest.
+They wear a bandolier of throwing axes across their chest.
+They look as though they just came in from the rain.
+Dust drifts off their boots at each step.
+Droplets of water drips off their boots at each step.
+Mist flows off their boots at each step.
+Their hair constantly moves as if blown by the wind.
+Their hair never moves, even in a strong wind.
+Their hair constantly moves as if floating underwater.
+They have hard, black eyes.
+They have soft blue eyes.
+They have piercing blue eyes.
+They have startling red eyes.
+They have gorgeous green eyes.
+They have watery blue eyes.
+Their eyes glow with a dim light.
+They have striking hazel eyes.
+They have bloodshot eyes.
+They have heavy bags underneath their eyes.
+They have dilated pupils.
+They have eye heterochromia -- One blue and one green. 
+They have unusual gray eyes.
+They have mysterious purple eyes.
+Light seems to dim around their eyes.
+They have small, beady eyes.
+They have large, innocent eyes.
+Their bald head is reflective in the sun.
+Their bald head is badly sunburned.
+Their nose whistles sofly as they breathe.
+They have multiple piercings all over their body.
+They have an ornate nose ring.
+They have an ornate earring.
+They wear bright and garrish clothing.
+They wear dark and gloomy clothing.
+They wear scholar's robes.
+They wear dusty farmer's clothes.
+They wear hand-me-down clothing that is two sizes too small.
+They wear hand-me-down clothing that is two sizes too big.
+They wear a flour-stained chef's apron.
+They wear a pristine grocer's apron.
+They wear a blood-stained doctor's apron.
+They wear an abundance of makeup.
+They wear revealing clothing.
+They wear modest clothing.
+They wear moth-eaten wizard's robes.
+They wear an apprentice's robes.
+They wear a trapper's fur cloak.
+They wear a singed alchemist's smock.
+They wear a dinged and pitted town guard armor.
+They wear pristine town guard armor.
+They wear aristocratic robes.
+They wear dock worker's attire.
+They wear gravetender's attire.
+They wear priest's attire.
+They wear the robes of a local clergy.
+They wear the heraldry of a local lord.
+They wear the heraldry of a foriegn lord.
+They wear the heraldry of a rival nation.
+The wear the heraldry of a friendly nation.
+They wear the heraldry of a hated lord.
+They wear the heraldry of a beloved lord.
+They wear the heraldry of a ancient lord.
+Their complexion has a slightly pinkish tinge to it.
+Their complexion has a slightly blue tinge to it.
+Their complexion has a slightly golden hue to it.
+Their complexion has a sickly pallor to it.
+Their complexion is deeply tanned from the sun.
+Their complexion is pale from lack of sun.
+Their complexion is full of freckles.
+Their breath reeks of alcohol.
+Their breath is clear and minty.
+Their breath is smells of salt and seaweed.
+Their breath smells of grass and honey.
+Their breath smells strongly of sulfur.
+Their breath smells of fresh rain.
+They smell like clean linen.
+They smell like livestock.
+They smell like tobacco and smoke.
+They smell like a wet dog.
+They smell like lavender and honeysuckle.
+They smell like pine trees.
+They smell like fresh-dug earth.
+They smell like fresh baked cookies.
+They have a melodious voice.
+They have a wreched voice.
+They have an earthy voice.
+They have a gravely voice.
+They have a high-pitched voice.
+They have a deep barritone voice.
+They have a strange echo to their voice.
+They have a strange growl to their voice.
+They have a sorrowful voice.
+They have a joyous tone to their voice.
+They have a foreign quality to their voice.
+They have an ancient quality to their voice.
+They have a regal quality to their voice.
+They have a lowborn quality to their voice.
+They have an artistic quality to their voice.
+They have a haunting quality to their voice.
+They have a mysterious quality to their voice.
+They have a frank quality to their voice.
+They have a wistful quality to their voice.
+They have a moody quality to their voice.
+They have a dark quality to their voice.
+They have a rough quality to their voice.
+They have a sing-song quality to their voice.
+They shuffle their feet.
+They walk proudly at all times.
+They walk with their head low. 
+They walk with their chin held high.
+They constantly look from side to side.
+They always look forward.
+They never break eye contact.
+They never look anyone directly in the eyes.
+They have a piercing gaze.
+They have a wandering eye.
+They fist-bump instead of shaking hands.
+They avoid cracks in the pavement.
+They skip once every fourth step.
+They have one fingernail painted black.
+They are missing the forefinger of their left hand.
+They are missing the pinkie finger of their right hand.
+They have six fingers on their right hand. 
+They have one thumb that ends with a long talon.
+They wear three gold rings on their left hand.
+They wear a beautiful jade bracelet on their right hand.
+They wear a cheap-looking bracelet on their left hand.
+They wear an ornate metal bracer on their right arm.
+They wear a fragment of a precious gem from their neck.
+They wear a gold cameo of a woman on their neck.
+They wear a gold cameo of a man on their neck.
+They wear a black armband on their left arm.
+They wear a leather mantle around their shoulders.
+They wear a bird's skull around their neck.
+They wear a badge around their neck.
+They wear a golden star amulet around their neck.
+They wear a torn yellow cloak around their shoulders
+They wear a neat green cloak around their shoulders.
+They wear a sea blue cloak around their shoulders.
+They wear a pair of pristine spectacles.
+They wear a pair of cracked spectacles.
+They wear a pair of spectacles that are missing one eyepiece.
+They wear a strange timepiece on their right wrist.
+They wear a pair of fine leather boots.
+They wear a pair of worn leather sandals.
+They wear a pair of soft leather shoes.
+They wear a pair of high-heeled slippers.
+They wear a pair of farmer's boots.
+They wear a pair of military boots.
+They wear a pair of tattered leather boots.
+A tamed squirrel walks at their side.
+A tamed dog walks by their side.
+A tamed falcon sits on their shoulder.
+A tamed wolf walks by their side.
+A tamed bear walks by their side.
+A tamed elk walks by their side.
+A tamed badger walks by their side.
+A tamed cat walks by their side.
+A tamed bat hangs from their shoulder.
+Two tamed sugar gliders rest in their coat pocket.
+A tamed horse walks by their side.
+A tamed chicken walks by their side.
+A tamed wolverine walks by their side.
+A tamed songbird sits on their shoulder.
+A tamed hawk sits on their shoulder.
+A tamed bluejay sits on their shoulder.
+A tamed hummingbird sits on their shoulder.
+They have a birthmark of a star on their shoulder.
+They have a birthmark of a sun on their wrist.
+They have a tattoo of a mermaid on their bicep.
+They have a tattoo of a grinning goblin on their shoulder.
+They have a tattoo of a barrel keg tap on their thigh.
+They have a tattoo of a man-o-war ship on their back.
+They have a tattoo of a woman's name on their bicep.
+They have a tattoo of a man's name on their bicep.
+They have eye heterochromia -- One green and one hazel.
+They have eye heterochromia -- One blue and one gray.
+They have eye heterochromia -- One black and one white.
+They have eye heterochromia -- One purple and one green.
+They have eye heterochromia -- One green and one gold.
+Music plays softly when they enter a room.
+Thunder sounds ominously when they enter a room.
+People cheer when they enter a room.
+People cry when they enter a room.
+People boo when they enter a room.
+People flee when they enter a room.
