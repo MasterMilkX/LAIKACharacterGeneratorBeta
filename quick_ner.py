@@ -10,7 +10,7 @@ import os
 import nltk
 from nltk.corpus import stopwords
 import requests
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 from nltk.tokenize.treebank import TreebankWordDetokenizer as Detok
 
 # get stop words
@@ -195,11 +195,28 @@ def replaceMC(prompt,blurb):
     return blurb
 
 # returns the dictionary synonyms of a given word
-def synonyms(term):
-    response = requests.get('https://www.thesaurus.com/browse/{}'.format(term))
-    soup = BeautifulSoup(response.text, 'html.parser')
-    soup.find('section', {'class': 'css-191l5o0-ClassicContentCard e1qo4u830'})
-    return [span.text.strip() for span in soup.findAll('a', {'class': 'css-1kg1yv8 eh475bn0'})]
+def synonyms(word):
+    #scrape from https://dictionaryapi.dev/
+    response = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
+    if response.status_code != 200:
+        print("ERROR: Could not receive data from API :/")
+        return []
+    jr = json.loads(json.dumps(response.json()))
+    
+    #parse the synonyms
+    syn_list = []
+    for j in jr:
+        for m in j['meanings']:
+            syn_list += m['synonyms']
+    return syn_list
+
+
+    # (old code) Scrape synonyms from thesaurus.com
+    # response = requests.get('https://www.thesaurus.com/browse/{}'.format(term))
+    # soup = BeautifulSoup(response.text, 'html.parser')
+    # soup.find('section', {'class': 'css-191l5o0-ClassicContentCard e1qo4u830'})
+    # return [span.text.strip() for span in soup.findAll('a', {'class': 'css-1kg1yv8 eh475bn0'})]
+
 
 def replaceSynonym(txt):
     txt_sent,pos_sent, _ = textPosPair(txt)
