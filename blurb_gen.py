@@ -258,6 +258,7 @@ def regexFixer(txt):
     txt_copy = re.sub(r"\bboys\b|\bgirls\b","children",txt_copy)
     txt_copy = re.sub(r"\bson\b|\bdaughter\b","child",txt_copy)
     txt_copy = re.sub(r"\bgrandson\b|\bgranddaughter\b","grandchild",txt_copy)
+    txt_copy = re.sub(r"\bgrandfather\b|\bgrandmother\b","grandparent",txt_copy)
     txt_copy = re.sub(r"\bmother\b|\bfather\b","parent",txt_copy)
     txt_copy = re.sub(r"\bsister\b|\bbrother\b","sibling",txt_copy)
     txt_copy = re.sub(r"\bhusband\b|\bwife\b","spouse",txt_copy)

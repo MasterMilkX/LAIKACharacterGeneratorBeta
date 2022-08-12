@@ -66,13 +66,13 @@ def getEntities(text):
 def getCharacters(text):
     e = getEntities(text)
     p = [x[0] for x in e if x[1] == "PERSON"]
-    return np.unique(p)
+    return np.unique(p).tolist()
 
 # extract all of the (possible) places from a text
 def getPlaces(text):
     e = getEntities(text)
     p = [x[0] for x in e if x[1] in ["FAC","GPE","ORG","GEO","LOC"]]
-    return np.unique(p)
+    return np.unique(p).tolist()
     
 
 # removes all of the proper nouns and makes the text generic
@@ -175,24 +175,54 @@ def replaceGeneric(genTxt, prompt, replacer={'name':"X",'place':"Y"},debug=False
 
 
 # replace the selected character from the a blurb text if they show up again
-def replaceMC(prompt,blurb):
+def replaceMC(prompt,blurb,MC=None):
     # get the proper nouns
     names = getCharacters(prompt)
-    places = getPlaces(prompt)
     
     #get the name of the character (or a random character if not given)
-    real_name_s = re.findall(r"--\s(.+)\s--",prompt,re.MULTILINE)
-    real_name = real_name_s[0] if real_name_s else random.choice(names)
+    if not MC:
+        real_name_s = re.findall(r"--\s(.+)\s--",prompt,re.MULTILINE)
+        real_name = real_name_s[0] if real_name_s else random.choice(names)
+    else:
+        real_name = MC
     
     #filter the other proper names
     other_names = [x for x in names if x not in real_name and "--" not in x]
     if len(other_names) == 0:
         other_names = random.choices(default_values['names'],k=5)
+        
    
     #replace MC name
-    while real_name in blurb:
-        blurb = blurb.replace(real_name, random.choice(other_names),1)
-    return blurb
+    b2 = blurb[:]
+    while real_name in b2:
+        b2 = b2.replace(real_name, random.choice(other_names),1)
+    return b2
+
+
+#replace all possessive MC's with another character to be safe
+def replacePossessive(prompt,txt,MC=None):
+    # get the proper nouns
+    names = getCharacters(prompt)
+    
+    #get the name of the character (or a random character if not given)
+    if not MC:
+        real_name_s = re.findall(r"--\s(.+)\s--",prompt,re.MULTILINE)
+        real_name = real_name_s[0] if real_name_s else random.choice(names)
+    else:
+        real_name = MC
+        
+    #filter the other proper names
+    other_names = [x for x in names if x != real_name and "--" not in x]
+    if len(other_names) == 0:
+        other_names = random.choices(default_values['names'],k=5)
+        
+    
+    #replace MC name
+    txt2 = txt[:]
+    while f"{real_name.strip()}’s" in txt2: 
+        txt2 = txt2.replace(f"{real_name.strip()}’s", f"{random.choice(other_names).strip()}’s")
+    return txt2
+
 
 # returns the dictionary synonyms of a given word
 def synonyms(word):
@@ -251,11 +281,13 @@ def retok(tokens):
 
 
 # add post-processing effects to the generated descriptions
-# - replace main character names
+# - replace all occurences of main character's name
 # - replace duplicate adjectives with synonyms
-def descPostProc(prompt,gen_txt):
-    new_gen_txt = replaceMC(prompt,gen_txt)
+# - replace the main character possessive with another character
+def descPostProc(prompt,gen_txt,mc=None):
+    #new_gen_txt = replaceMC(prompt,gen_txt,mc)
     new_gen_txt = replaceSynonym(gen_txt)
+    new_gen_txt = replacePossessive(prompt,new_gen_txt,mc)
     return new_gen_txt
 
 
